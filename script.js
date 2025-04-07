@@ -23,7 +23,20 @@ document.addEventListener("keydown", function(e) {
 let buttonClick = document.getElementById("clickMe");
 
 document.addEventListener("click", function() {
-    
+
     buttonClick.innerText = "You clicked me!";
     
 });
+
+function getRandomColor() {
+    
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+function changeColor() {
+    document.body.style.backgroundColor = getRandomColor();
+}
