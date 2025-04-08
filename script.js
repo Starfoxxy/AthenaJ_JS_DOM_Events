@@ -1,5 +1,5 @@
 //When the dom is fully loaded, this will be fired
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function() {
 
     //Get the element with an id of onload
     let onLoadEl = document.getElementById("onload");
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(){
     //Add some HTML within the element we grabbed
     onLoadEl.innerHTML = "<h1> I loaded cause the DOM was fully loaded</h1>"
    
-   })
+});
 
    //Get the element that will show our key code
 let directionEl = document.getElementById("direction");
@@ -45,4 +45,24 @@ function changeBtnStyle() {
     const btn = document.querySelector(".cool-btn")
     btn.classList.toggle("glow"); // Toggles glow effect
    }
-   
+
+
+const modeToggleButton = document.getElementById('mode-btn');
+
+function switchToDarkMode() {
+    document.body.classList.add('dark-mode');
+    modeToggleButton.textContent = 'Switch to Light Mode';
+}
+
+function switchToLightMode() {
+    document.body.classList.remove('dark-mode');
+    modeToggleButton.textContent = 'Switch to Dark Mode';
+}
+
+function toggleMode() {
+    if(document.body.classList.contains('dark-mode')) {
+        switchToLightMode();
+    } else {
+        switchToDarkMode();
+    }
+}

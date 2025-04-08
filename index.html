@@ -20,6 +20,33 @@
     .glow {
         box-shadow: 0 0 15px rgba(255, 107, 107, 0.8);
     }
+
+
+    body {
+        background-color: white;
+        color: black;
+        font-family: Arial, sans-serif;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #f0f0f0;
+    }
+
+    body.dark-mode {
+        background-color: #333;
+        color: white;
+    }
+
+    button.dark-mode {
+        background-color: #444;
+        color: white;
+    }
+
+    button.dark-mode:hover {
+        background-color: #555;
+    }
+
 </style>
  </head>
  <body>
@@ -30,6 +57,7 @@
    <button id="clickMe">Click me for something To happen</button>
    <button id="randomColorBtn" onclick="changeColor()">Click me to change the color</button>
    <button class="cool-btn" onclick="changeBtnStyle()">Click me to change my style</button>
+   <button id="mode-btn" onclick="toggleMode()">Switch to dark mode</button>
    <script src="script.js"></script>
  </body>
 </html>
