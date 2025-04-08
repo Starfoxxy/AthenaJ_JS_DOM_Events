@@ -40,3 +40,9 @@ function getRandomColor() {
 function changeColor() {
     document.body.style.backgroundColor = getRandomColor();
 }
+
+function changeBtnStyle() {
+    const btn = document.querySelector(".cool-btn")
+    btn.classList.toggle("glow"); // Toggles glow effect
+   }
+   
